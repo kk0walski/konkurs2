@@ -284,6 +284,7 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.email
 
+from django.utils import timezone
 
 class Participant(models.Model):
     user = models.OneToOneField(
