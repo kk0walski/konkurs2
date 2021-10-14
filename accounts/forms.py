@@ -56,12 +56,12 @@ class SignupForm(forms.Form):
             return existing_address[0]
         else:
             address = Address()
-            address.fullAddress = self.cleaned_data['full_address']
-            address.address1 = self.cleaned_data['street_address1']
-            address.address2 = self.cleaned_data['street_address2']
-            address.zip_code = self.cleaned_data['postal_code']
-            address.city = self.cleaned_data['postal_code']
-            address.country = self.cleaned_data['country']
+            address.fullAddress = fullAddress
+            address.address1 = address1
+            address.address2 = address2
+            address.zip_code = zip
+            address.city = city
+            address.country = country
             address.save()
             return address
 
