@@ -33,9 +33,9 @@ class SignupForm(forms.Form):
                                                              "type": "date",
                                                              }), initial=datetime.date.today)
     place_of_birth = forms.CharField(initial="Kalisz", max_length=100)
-    phone_number = PhoneNumberField(widget=PhoneNumberPrefixWidget(
+    phone_number = PhoneNumberField(required=False, widget=PhoneNumberPrefixWidget(
         initial="PL", attrs={'class': 'form-control'}))
-    cellphone_number = PhoneNumberField(widget=PhoneNumberPrefixWidget(
+    cellphone_number = PhoneNumberField(required=False, widget=PhoneNumberPrefixWidget(
         initial="PL", attrs={'class': 'form-control'}))
 
     def signup(self, request, user):
