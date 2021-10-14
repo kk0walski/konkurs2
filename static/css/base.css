@@ -32,6 +32,71 @@ body {
   background-color: #f5f5f5;
 }
 
-form {
+
+  
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  width: 100%;
+  background-color: #de1a22;
+  padding:20px 0px 20px 0px;
+}
+
+
+.bg-red {
+  background-color: #de1a22;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.line{
+  width: 100%;
+  float: left;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 5px;
+}    
+.color-red {
+  background-color: #cd0000;
+  padding: 15px;
+  height: 120px;
+}
+.bottom-menu {
+  color: #fff;
+  text-decoration: none;
+   text-transform:uppercase;
+}
+.col-sm-4{
+  margin-bottom: 15px;
+}
+.gkEventsListProgress{
+  background: #e5e5e5;
+  height: 3px;
+  margin-left: 16px;
+  position: relative;
+  top: -2px;
+  width: 50px;
+}
+form
+{
+  margin-left: 0px;
+  margin-right: 0px;
   padding-bottom: 20px;
+}
+.details li {
+  list-style: none;
+}
+li {
+    margin-bottom:10px;
+    
 }
