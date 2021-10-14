@@ -39,6 +39,14 @@ class SignupForm(forms.Form):
     cellphone_number = PhoneNumberField(required=False, widget=PhoneNumberPrefixWidget(
         initial="PL", attrs={'class': 'form-control'}))
     nationality = forms.ChoiceField(required=False, choices=ISO_3166_CODES)
+    fullAddress = forms.CharField(max_length=1024)
+    street_address1 = forms.CharField(
+        help_text="Street address, P.O. box, company, name, c/o", max_length=1024)
+    street_address2 = forms.CharField(
+        help_text="Appartment, suite, unit building, floor, etc.", max_length=1024)
+    postal_code = forms.CharField(max_length=12)
+    city = forms.CharField(max_length=1024)
+    country = forms.ChoiceField(choices=ISO_3166_CODES)
 
     def signup(self, request, user):
         user.first_name = self.cleaned_data['first_name']
