@@ -284,39 +284,7 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.email
 
-from django.utils import timezone
-
-class Participant(models.Model):
-    user = models.OneToOneField(
-        settings.AUTH_USER_MODEL,
-        verbose_name=_("Email"),
-        on_delete=models.CASCADE,
-        primary_key=True
-    )
-    site = models.URLField(blank=True)
-    birthday = models.DateField(default=timezone.now)
-    place_of_birth = models.CharField(
-        _("Place Of Birth"), default="Kalisz", max_length=100
-    )
-    phone_number = PhoneNumberField(
-        blank=True, help_text=_("Phone number ex: '+41524204242'")
-    )
-    cellphone_number = PhoneNumberField(
-        blank=True, help_text=_("Phone number ex: '+41524204242'")
-    )
-    nationality = CountryField(_("Nationality"))
-
-    def __str__(self):
-        return self.user.email
-
-
 class Address(models.Model):
-    user = models.OneToOneField(
-        settings.AUTH_USER_MODEL,
-        verbose_name=_("Email"),
-        on_delete=models.CASCADE,
-        primary_key=True
-    )
     fullAddress = models.CharField(
         _("Full address"),
         max_length=1024,
@@ -348,5 +316,35 @@ class Address(models.Model):
 
     country = CountryField(_("Country"))
 
+    def __str__(self):
+        return self.fullAddress
+
     class Meta:
         verbose_name_plural = _("Addresses")
+
+
+from django.utils import timezone
+
+class Participant(models.Model):
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        verbose_name=_("Email"),
+        on_delete=models.CASCADE,
+        primary_key=True
+    )
+    site = models.URLField(blank=True)
+    birthday = models.DateField(default=timezone.now)
+    place_of_birth = models.CharField(
+        _("Place Of Birth"), default="Kalisz", max_length=100
+    )
+    phone_number = PhoneNumberField(
+        blank=True, help_text=_("Phone number ex: '+41524204242'")
+    )
+    cellphone_number = PhoneNumberField(
+        blank=True, help_text=_("Phone number ex: '+41524204242'")
+    )
+    nationality = CountryField(_("Nationality"))
+    address = models.ForeignKey(Address, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.email

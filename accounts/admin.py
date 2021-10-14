@@ -20,7 +20,7 @@ admin.site.register(CustomUser, CustomUserAdmin)
 class ParticipantAdmin(admin.ModelAdmin):
     model = Participant
     list_display = ("user", "nationality", "birthday")
-    list_filter = ("user", "nationality", "birthday")
+    list_filter = ("user", "nationality", "birthday", "address")
     fieldsets = (
         (_("Contact info"), {
          "fields": ("user", "phone_number", "cellphone_number")}),
@@ -31,6 +31,7 @@ class ParticipantAdmin(admin.ModelAdmin):
                     "birthday",
                     "site",
                     "nationality",
+                    "address"
                 )
             },
         ),
@@ -43,11 +44,11 @@ admin.site.register(Participant, ParticipantAdmin)
 
 
 class AddressAdmin(admin.ModelAdmin):
-    list_filter = ("user", "country", "city", "zip_code")
+    list_filter = ("country", "city", "zip_code")
     list_display = ("fullAddress", "zip_code", "city", "country")
     fieldsets = (
         (_("Basic info"), {
-         "fields": ("user", "fullAddress", "country", "city")}),
+         "fields": ("fullAddress", "country", "city")}),
         (
             _("Address info"),
             {
