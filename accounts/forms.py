@@ -48,10 +48,22 @@ class SignupForm(forms.Form):
     city = forms.CharField(max_length=1024)
     country = forms.ChoiceField(choices=ISO_3166_CODES)
 
-    def existing_address(self, fullAddress, address1, address2, zip, city, country):
-        return Address.objects.filter(fullAddress=fullAddress, address1=address1,
-                                      address2=address2, zip_code=zip, city=city,
-                                      country=country)
+    def get_address(self, fullAddress, address1, address2, zip, city, country):
+        existing_address = Address.objects.filter(fullAddress=fullAddress, address1=address1,
+                                                  address2=address2, zip_code=zip, city=city,
+                                                  country=country)
+        if existing_address.exists():
+            return existing_address[0]
+        else:
+            address = Address()
+            address.fullAddress = self.cleaned_data['full_address']
+            address.address1 = self.cleaned_data['street_address1']
+            address.address2 = self.cleaned_data['street_address2']
+            address.zip_code = self.cleaned_data['postal_code']
+            address.city = self.cleaned_data['postal_code']
+            address.country = self.cleaned_data['country']
+            address.save()
+            return address
 
     def signup(self, request, user):
         user.first_name = self.cleaned_data['first_name']
@@ -64,19 +76,7 @@ class SignupForm(forms.Form):
         participant.phone_number = self.cleaned_data['phone_number']
         participant.cellphone_number = self.cleaned_data['cellphone_number']
         participant.nationality = self.cleaned_data['nationality']
-        existing_address = self.existing_address(self.cleaned_data['full_address'], self.cleaned_data['street_address1'], self.cleaned_data[
-                                                 'street_address2'], self.cleaned_data['postal_code'], self.cleaned_data['postal_code'], self.cleaned_data['country'])
-        if existing_address.exists():
-            participant.address = existing_address[0]
-        else:
-            address = Address()
-            address.fullAddress = self.cleaned_data['full_address']
-            address.address1 = self.cleaned_data['street_address1']
-            address.address2 = self.cleaned_data['street_address2']
-            address.zip_code = self.cleaned_data['postal_code']
-            address.city = self.cleaned_data['postal_code']
-            address.country = self.cleaned_data['country']
-            address.save()
-            participant.address = address
+        participant.address = self.existing_address(self.cleaned_data['full_address'], self.cleaned_data['street_address1'], self.cleaned_data[
+            'street_address2'], self.cleaned_data['postal_code'], self.cleaned_data['postal_code'], self.cleaned_data['country'])
         participant.save()
         return user
