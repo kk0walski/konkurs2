@@ -2,6 +2,7 @@ from django.forms.widgets import Widget
 from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberPrefixWidget
 import datetime
+from .models import ISO_3166_CODES
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import CustomUser, Participant
@@ -37,6 +38,7 @@ class SignupForm(forms.Form):
         initial="PL", attrs={'class': 'form-control'}))
     cellphone_number = PhoneNumberField(required=False, widget=PhoneNumberPrefixWidget(
         initial="PL", attrs={'class': 'form-control'}))
+    nationality = forms.ChoiceField(required=False, choices=ISO_3166_CODES)
 
     def signup(self, request, user):
         user.first_name = self.cleaned_data['first_name']
