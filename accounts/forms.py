@@ -5,7 +5,7 @@ import datetime
 from .models import ISO_3166_CODES
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .models import CustomUser, Participant
+from .models import CustomUser, Participant, Address
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -26,7 +26,7 @@ class SignupForm(forms.Form):
     first_name = forms.CharField(max_length=30)
     last_name = forms.CharField(max_length=30)
     site = forms.URLField(required=False)
-    birthday = forms.DateField(input_formats=("%d-%m-%Y"),
+    birthday = forms.DateField(input_formats=['%Y-%m-%d'],
                                widget=forms.DateInput(attrs={"firstDay": 1,
                                                              "pattern=": "\d{4}-\d{2}-\d{2}",
                                                              "lang": "pl",
@@ -39,7 +39,7 @@ class SignupForm(forms.Form):
     cellphone_number = PhoneNumberField(required=False, widget=PhoneNumberPrefixWidget(
         initial="PL", attrs={'class': 'form-control'}))
     nationality = forms.ChoiceField(required=False, choices=ISO_3166_CODES)
-    fullAddress = forms.CharField(max_length=1024)
+    full_address = forms.CharField(max_length=1024)
     street_address1 = forms.CharField(
         help_text="Street address, P.O. box, company, name, c/o", max_length=1024)
     street_address2 = forms.CharField(
@@ -52,4 +52,20 @@ class SignupForm(forms.Form):
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
         user.save()
+        participant = Participant(user=user)
+        participant.site = self.cleaned_data['site']
+        participant.birthday = self.cleaned_data['birthday']
+        participant.place_of_birth = self.cleaned_data['place_of_birth']
+        participant.phone_number = self.cleaned_data['phone_number']
+        participant.cellphone_number = self.cleaned_data['cellphone_number']
+        participant.nationality = self.cleaned_data['nationality']
+        participant.save()
+        address = Address(user=user)
+        address.fullAddress = self.cleaned_data['full_address']
+        address.address1 = self.cleaned_data['street_address1']
+        address.address2 = self.cleaned_data['street_address2']
+        address.zip_code = self.cleaned_data['postal_code']
+        address.city = self.cleaned_data['postal_code']
+        address.country = self.cleaned_data['country']
+        address.save()
         return user
