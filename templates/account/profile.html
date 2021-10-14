@@ -40,19 +40,28 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Full Name</h6>
+                            <h6 class="mb-0">Website</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            Kenneth Valdez
+                            {{user.participant.site}}
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Email</h6>
+                            <h6 class="mb-0">Birthday</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            fip@jukmuh.al
+                            {{user.participant.birthday}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Place of birth</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{user.participant.place_of_birth}}
                         </div>
                     </div>
                     <hr>
@@ -61,7 +70,7 @@
                             <h6 class="mb-0">Phone</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            (239) 816-9029
+                            {{user.participant.phone_number}}
                         </div>
                     </div>
                     <hr>
@@ -70,16 +79,16 @@
                             <h6 class="mb-0">Mobile</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            (320) 380-4539
+                            {{user.participant.cellphone_number}}
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Address</h6>
+                            <h6 class="mb-0">Nationality</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            Bay Area, San Francisco, CA
+                            {{user.participant.nationality}}
                         </div>
                     </div>
                     <hr>
@@ -100,46 +109,55 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Full Name</h6>
+                            <h6 class="mb-0">Full Address</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            Kenneth Valdez
+                            {{user.participant.address.fullAddress}}
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Email</h6>
+                            <h6 class="mb-0">Street address</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            fip@jukmuh.al
+                            {{user.participant.address.address1}}
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Phone</h6>
+                            <h6 class="mb-0">Building</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            (239) 816-9029
+                            {{user.participant.address.address2}}
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Mobile</h6>
+                            <h6 class="mb-0">Postal code</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            (320) 380-4539
+                            {{user.participant.address.zip_code}}
                         </div>
                     </div>
                     <hr>
                     <div class="row">
                         <div class="col-sm-3">
-                            <h6 class="mb-0">Address</h6>
+                            <h6 class="mb-0">City</h6>
                         </div>
                         <div class="col-sm-9 text-secondary">
-                            Bay Area, San Francisco, CA
+                            {{user.participant.address.city}}
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Country</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            {{user.participant.address.country}}
                         </div>
                     </div>
                     <hr>
