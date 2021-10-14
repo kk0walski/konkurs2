@@ -17,4 +17,4 @@ class CurrentUserMixin(object):
         return obj
 
 class UserDetailView(CurrentUserMixin, DetailView):
-    pass 
+    template_name = 'account/profile.html' 
