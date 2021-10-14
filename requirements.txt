@@ -5,3 +5,4 @@ django-debug-toolbar==3.2
 whitenoise==5.2.0
 phonenumbers>=7.0.2
 django-phonenumber-field==5.2.0
+Babel==2.9.1
