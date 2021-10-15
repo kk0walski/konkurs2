@@ -103,23 +103,3 @@ class AddressForm(forms.ModelForm):
         model = Address
         fields = {'fullAddress', 'address1',
                   'address2', 'zip_code', 'city', 'country'}
-
-    def equal(self, other):
-        if (self.instance.fullAddress == other.fullAddress and self.instance.address1 == other.address1 and
-            self.instance.address2 == other.address2 and self.instance.city == other.city and
-            self.instance.country == other.country):
-            return True
-        else:
-            return False
-
-    def save(self):
-        data = self.cleaned_data
-        number_of_users = Participant.objects.filter(
-            address=self.instance).count()
-        if number_of_users == 1:
-            self.instance.save()
-        else:
-            new_address = Address(fullAddress=data['fullAddress'], address1=data['address1'],
-                                         address2=data['address2'], zip_code=data['zip_code'], city=data['city'], country=data['country'])
-            if new_address != self.instance:
-                new_address.save()
