@@ -1,7 +1,6 @@
-from django.core.checks import messages
+from django.contrib import messages
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required, user_passes_test
-from django.views.generic.detail import DetailView
 from django.conf import settings
 from .models import Participant
 

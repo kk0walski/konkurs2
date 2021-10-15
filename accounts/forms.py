@@ -85,7 +85,7 @@ class SignupForm(forms.Form):
 class UserEditForm(forms.ModelForm):
     class Meta:
         model = CustomUser
-        fields = ('email', 'first_name', 'last_name')
+        fields = ('first_name', 'last_name')
 
 class ProfileForm(forms.ModelForm):
     class Meta:
