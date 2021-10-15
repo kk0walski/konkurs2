@@ -80,3 +80,22 @@ class SignupForm(forms.Form):
             'street_address2'], self.cleaned_data['postal_code'], self.cleaned_data['postal_code'], self.cleaned_data['country'])
         participant.save()
         return user
+
+
+class UserEditForm(forms.ModelForm):
+    class Meta:
+        model = CustomUser
+        fields = ('email', 'first_name', 'last_name')
+
+class ProfileForm(forms.ModelForm):
+    class Meta:
+        model = Participant
+        fields = ('birthday', 'place_of_birth', 'phone_number', 'cellphone_number', 'nationality')
+        widgets = {
+            'birthday': forms.DateInput(attrs={'type': 'date'})
+        }
+
+class AddressForm(forms.ModelForm):
+    class Meta:
+        model = Address
+        fields = {'fullAddress', 'address1', 'address2', 'zip_code', 'city', 'country'}

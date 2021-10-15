@@ -1,34 +1,15 @@
-{% extends '_account.html' %} {% block form %}
+{% extends '_account.html' %}
+{% load crispy_forms_tags %}
+
+{% block form %}
 <div class="main-body">
     <h2>User data</h2>
     <div class="row gutters-sm">
         <div class="col-md-12">
             <div class="card mb-3">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Full Name</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{ user.first_name }} {{ user.last_name }}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Email</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{ user.email}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <a class="btn btn-info " target="__blank"
-                                href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                        </div>
-                    </div>
+                    {% csrf_token %}
+                    {{ user_form|crispy }}
                 </div>
             </div>
         </div>
@@ -38,66 +19,8 @@
         <div class="col-md-12">
             <div class="card mb-3">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Website</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.site}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Birthday</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.birthday}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Place of birth</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.place_of_birth}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Phone</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.phone_number}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Mobile</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.cellphone_number}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Nationality</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.nationality}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <a class="btn btn-info " target="__blank"
-                                href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                        </div>
-                    </div>
+                    {% csrf_token %}
+                    {{ participant_form|crispy }}
                 </div>
             </div>
         </div>
@@ -107,66 +30,8 @@
         <div class="col-md-12">
             <div class="card mb-3">
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Full Address</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.address.fullAddress}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Street address</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.address.address1}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Building</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.address.address2}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Postal code</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.address.zip_code}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">City</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.address.city}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <h6 class="mb-0">Country</h6>
-                        </div>
-                        <div class="col-sm-9 text-secondary">
-                            {{user.participant.address.country}}
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <a class="btn btn-info " target="__blank"
-                                href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
-                        </div>
-                    </div>
+                    {% csrf_token %}
+                    {{ address_form|crispy }}
                 </div>
             </div>
         </div>
