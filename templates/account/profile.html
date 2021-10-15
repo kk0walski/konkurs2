@@ -3,38 +3,49 @@
 
 {% block form %}
 <div class="main-body">
-    <h2>User data</h2>
-    <div class="row gutters-sm">
-        <div class="col-md-12">
-            <div class="card mb-3">
-                <div class="card-body">
-                    {% csrf_token %}
-                    {{ user_form|crispy }}
+    <form method="POST">
+        <h2>User data</h2>
+        <div class="row gutters-sm">
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        {% csrf_token %}
+                        {{ user_form|crispy }}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <h2>Participant data</h2>
-    <div class="row gutters-sm">
-        <div class="col-md-12">
-            <div class="card mb-3">
-                <div class="card-body">
-                    {% csrf_token %}
-                    {{ participant_form|crispy }}
+        <h2>Participant data</h2>
+        <div class="row gutters-sm">
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        {% csrf_token %}
+                        {{ participant_form|crispy }}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <h2>Address data</h2>
-    <div class="row gutters-sm">
-        <div class="col-md-12">
-            <div class="card mb-3">
-                <div class="card-body">
-                    {% csrf_token %}
-                    {{ address_form|crispy }}
+        <h2>Address data</h2>
+        <div class="row gutters-sm">
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        {% csrf_token %}
+                        {{ address_form|crispy }}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row gutters-sm">
+            <div class="col-md-12">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <input type="submit" value="Submit" class="btn btn-success">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}
