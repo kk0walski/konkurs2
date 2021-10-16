@@ -1,4 +1,4 @@
-from django.forms.widgets import Widget
+from django.contrib.auth.models import Group
 from phonenumber_field.formfields import PhoneNumberField
 from phonenumber_field.widgets import PhoneNumberPrefixWidget
 import datetime
@@ -66,9 +66,12 @@ class SignupForm(forms.Form):
             return address
 
     def signup(self, request, user):
+        user.username = self.cleaned_data['email']
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
         user.save()
+        participants_group, _ = Group.objects.get_or_create(name="Participants")
+        participants_group.user_set.add(user)
         participant = Participant(user=user)
         participant.site = self.cleaned_data['site']
         participant.birthday = self.cleaned_data['birthday']
@@ -76,7 +79,7 @@ class SignupForm(forms.Form):
         participant.phone_number = self.cleaned_data['phone_number']
         participant.cellphone_number = self.cleaned_data['cellphone_number']
         participant.nationality = self.cleaned_data['nationality']
-        participant.address = self.existing_address(self.cleaned_data['full_address'], self.cleaned_data['street_address1'], self.cleaned_data[
+        participant.address = self.get_address(self.cleaned_data['full_address'], self.cleaned_data['street_address1'], self.cleaned_data[
             'street_address2'], self.cleaned_data['postal_code'], self.cleaned_data['postal_code'], self.cleaned_data['country'])
         participant.save()
         return user
