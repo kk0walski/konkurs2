@@ -4,7 +4,7 @@
 {% block title %}Home page{% endblock title %}
 
 {% block content %}
-<div class="container-fluid">
+<section id="carousel-images">
   <div class="row align-items-center" style="background-color: rgb(228, 228, 228);">
     <div class="col-sm-2">
       <div class="text-center" style="color: red;">
@@ -41,53 +41,51 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 <br />
 <section id="top-menu">
-  <div class="container-fluid bg-3 text-center">
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="col-sm-11 color-red">
-          <a href="#jury">
-            <img src="{% static 'images/ico-giuria.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
-            <br />
-            <strong class="bottom-menu">JURY</strong>
-          </a>
-        </div>
+  <div class="row bg-3 text-center">
+    <div class="col-sm-3">
+      <div class="col-sm-11 color-red">
+        <a href="#jury">
+          <img src="{% static 'images/ico-giuria.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
+          <br />
+          <strong class="bottom-menu">JURY</strong>
+        </a>
       </div>
-      <div class="col-sm-3">
-        <div class="col-sm-11 color-red">
-          <a href="#nagrody">
-            <img src="{% static 'images/ico-premi.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
-            <br />
-            <strong class="bottom-menu">NAGRODY</strong>
-          </a>
-        </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="col-sm-11 color-red">
+        <a href="#nagrody">
+          <img src="{% static 'images/ico-premi.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
+          <br />
+          <strong class="bottom-menu">NAGRODY</strong>
+        </a>
       </div>
-      <div class="col-sm-3">
-        <div class="col-sm-11 color-red">
-          <a href="#regulamin">
-            <img src="{% static 'images/ico-bando.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
-            <br />
-            <strong class="bottom-menu">REGULAMIN</strong>
-          </a>
-        </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="col-sm-11 color-red">
+        <a href="#regulamin">
+          <img src="{% static 'images/ico-bando.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
+          <br />
+          <strong class="bottom-menu">REGULAMIN</strong>
+        </a>
       </div>
-      <div class="col-sm-3">
-        <div class="col-sm-11 color-red">
-          <a href="#zgloszenie">
-            <img src="{% static 'images/ico-iscrizione.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
-            <br />
-            <strong class="bottom-menu">JAK ZGŁOSIĆ SIĘ DO KONKURSU?</strong>
-          </a>
-        </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="col-sm-11 color-red">
+        <a href="#zgloszenie">
+          <img src="{% static 'images/ico-iscrizione.png' %}" alt="The Jury Arte Laguna Prize" width="50" height="50">
+          <br />
+          <strong class="bottom-menu">JAK ZGŁOSIĆ SIĘ DO KONKURSU?</strong>
+        </a>
       </div>
     </div>
   </div>
   <br />
 </section>
 <section id="categories">
-  <div class="container-fluid bg-3">
+  <div class="bg-3">
     <h3>KATEGORIE</h3>
     <br />
     <div class="row">
@@ -210,43 +208,41 @@
     </div>
 </section>
 <section id="jury">
-  <div class="container-fluid bg-3">
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="col-sm-11">
-          <h3>JURY</h3>
-          <p>
-            Wybór nadesłanych prac należy do międzynarodowego jury składającego się z samych ekspertów:
-          <ul>
-            <li>Dyrektorów muzeów</li>
-            <li>Kuratorów sztuki</li>
-            <li>Krytyków sztuki</li>
-          </ul>
-          </p>
-        </div>
+  <div class="row bg-3">
+    <div class="col-sm-3">
+      <div class="col-sm-11">
+        <h3>JURY</h3>
+        <p>
+          Wybór nadesłanych prac należy do międzynarodowego jury składającego się z samych ekspertów:
+        <ul>
+          <li>Dyrektorów muzeów</li>
+          <li>Kuratorów sztuki</li>
+          <li>Krytyków sztuki</li>
+        </ul>
+        </p>
       </div>
-      <div class="col-sm-3">
-        <div class="col-sm-12">
-          <img src="{% static 'images/igor_zanti.jpg' %}" alt="Igor Zanti" class="img-responsive" width="100%">
-          <strong style="color: #3f81a1;">Igor Zanti</strong>
-          <p>Włochy, Kurator sztuki oraz przewodniczący jury</p>
-        </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="col-sm-12">
+        <img src="{% static 'images/igor_zanti.jpg' %}" alt="Igor Zanti" class="img-responsive" width="100%">
+        <strong style="color: #3f81a1;">Igor Zanti</strong>
+        <p>Włochy, Kurator sztuki oraz przewodniczący jury</p>
       </div>
-      <div class="col-sm-3">
-        <div class="col-sm-12">
-          <img src="{% static 'images/domenico_de_chirico.jpg' %}" alt="Domenico De Chirico" class="img-responsive"
-            width="100%">
-          <strong style="color: #3f81a1;">Domenico De Chirico</strong>
-          <p>Włochy, niezależny kurator</p>
-        </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="col-sm-12">
+        <img src="{% static 'images/domenico_de_chirico.jpg' %}" alt="Domenico De Chirico" class="img-responsive"
+          width="100%">
+        <strong style="color: #3f81a1;">Domenico De Chirico</strong>
+        <p>Włochy, niezależny kurator</p>
       </div>
-      <div class="col-sm-3">
-        <div class="col-sm-12">
-          <img src="{% static 'images/caroline_corbetta.jpg' %}" alt="Caroline Corbetta" class="img-responsive"
-            width="100%">
-          <strong style="color: #3f81a1;">Caroline Corbetta</strong>
-          <p>Włochy, niezależny kurator</p>
-        </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="col-sm-12">
+        <img src="{% static 'images/caroline_corbetta.jpg' %}" alt="Caroline Corbetta" class="img-responsive"
+          width="100%">
+        <strong style="color: #3f81a1;">Caroline Corbetta</strong>
+        <p>Włochy, niezależny kurator</p>
       </div>
     </div>
     <div class="row">
@@ -275,7 +271,8 @@
       </div>
       <div class="col-sm-3">
         <div class="col-sm-12">
-          <img src="{% static 'images/simone_pallotta.jpg' %}" alt="Simone Pallotta" class="img-responsive" width="100%">
+          <img src="{% static 'images/simone_pallotta.jpg' %}" alt="Simone Pallotta" class="img-responsive"
+            width="100%">
           <strong style="color: #3f81a1;">Simone Pallotta</strong>
           <p>Włochy, dyrektor artystyczny Arte Sella TrentinoWłochy, kurator sztuki publicznej i miejskiej</p>
         </div>
@@ -298,8 +295,8 @@
       </div>
       <div class="col-sm-3">
         <div class="col-sm-12">
-          <img src="{% static 'images/ekaterina_shcherbakova.jpg' %}" alt="Ekaterina Shcherbakova" class="img-responsive"
-            width="100%">
+          <img src="{% static 'images/ekaterina_shcherbakova.jpg' %}" alt="Ekaterina Shcherbakova"
+            class="img-responsive" width="100%">
           <strong style="color: #3f81a1;">Ekaterina Shcherbakova</strong>
           <p>Rosja, niezależny kurator i krytyk sztuki</p>
         </div>
@@ -316,379 +313,376 @@
 </section>
 <section id="nagrody">
   <div style="background-color: #D3D3D3">
-    <div class="container-fluid">
-      <h3>NAGRODY</h3>
+    <h3>NAGRODY</h3>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="col-sm-12">
+          <strong style="color: #3f81a1;">NAGRODY INSTYTUCJONALNE</strong>
+          <p>Nagrody pieniężneprzyznanie 5 nagród pieniężnych w wysokości 7.000€ każda dla głównych
+            zwycięców wybranych
+            spośród artystów.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
+          <strong>MALARSTWO</strong>
+          <br />
+          <strong style="color: #3f81a1;">€ 7.000</strong>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
+          <strong>RZEŹBA I INSTALACJA | SZTUKA WIRTUALNA</strong>
+          <br />
+          <strong style="color: #3f81a1;">€ 7.000</strong>
+        </div>
+      </div>
+    </div>
+    <div class=row>
+      <div class="col-sm-4">
+        <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
+          <strong>SZUKA FOTOGRAFII| GRAFIKA CYFROWA </strong>
+          <br />
+          <strong style="color: #3f81a1;">€ 7.000</strong>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="col-sm-12" style="background-color: white; padding:10px 10px 10px 10px">
+          <strong>SZTUKA WIDEO | FILMY KRÓTKOMETRAŻOWE | WYSTĘPY</strong>
+          <br />
+          <strong style="color: #3f81a1;">€ 7.000</strong>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
+          <strong>SZTUKA ŚRODOWISKOWA | SZTUKA MIEJSKA</strong>
+          <br />
+          <strong style="color: #3f81a1;">€ 7.000</strong>
+        </div>
+      </div>
+    </div>
+    <h4 style="color:red">3 WYSTAWY W GALERIACH SZTUKI</h4>
+    <p>Realizacja 3 wystaw w międzynarodowych Galeriach Sztuki, obejmująca instalację, inaugurację i katalog.
+    </p>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/galerie_isabel_lesmeister1.jpg' %}" alt="Galerie Isabelle Lesmeister"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Galerie Isabelle Lesmeister</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Ratyzbona,
+            Niemcy</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/galeria_fernando_santos1.jpg' %}" alt="Galeria Fernando Santos"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Galeria Fernando Santos</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Porto,
+            Portugalia</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/chelouche_gallery1.jpg' %}" alt="Galeria Sztuki Współczesnej Chelouche"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Galeria Sztuki Współczesnej
+            Chelouche</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Tel Aviv,
+            Izrael</strong>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-3" style="background-color: #D3D3D3">
+      <h4 style="color:#cd0000">1 NAGRODA ZRÓWNOWAŻONY ROZWÓJ I SZTUKA</h4>
+      <p>Kreatywne projekty w trosce o zrównoważony rozwój.</p>
       <div class="row">
-        <div class="col-sm-4">
-          <div class="col-sm-12">
-            <strong style="color: #3f81a1;">NAGRODY INSTYTUCJONALNE</strong>
-            <p>Nagrody pieniężneprzyznanie 5 nagród pieniężnych w wysokości 7.000€ każda dla głównych
-              zwycięców wybranych
-              spośród artystów.
-            </p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
-            <strong>MALARSTWO</strong>
-            <br />
-            <strong style="color: #3f81a1;">€ 7.000</strong>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
-            <strong>RZEŹBA I INSTALACJA | SZTUKA WIRTUALNA</strong>
-            <br />
-            <strong style="color: #3f81a1;">€ 7.000</strong>
-          </div>
-        </div>
-      </div>
-      <div class=row>
-        <div class="col-sm-4">
-          <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
-            <strong>SZUKA FOTOGRAFII| GRAFIKA CYFROWA </strong>
-            <br />
-            <strong style="color: #3f81a1;">€ 7.000</strong>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="col-sm-12" style="background-color: white; padding:10px 10px 10px 10px">
-            <strong>SZTUKA WIDEO | FILMY KRÓTKOMETRAŻOWE | WYSTĘPY</strong>
-            <br />
-            <strong style="color: #3f81a1;">€ 7.000</strong>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="col-sm-12" style="background-color: white; padding:10px 10px 30px 10px">
-            <strong>SZTUKA ŚRODOWISKOWA | SZTUKA MIEJSKA</strong>
-            <br />
-            <strong style="color: #3f81a1;">€ 7.000</strong>
-          </div>
-        </div>
-      </div>
-      <h4 style="color:red">3 WYSTAWY W GALERIACH SZTUKI</h4>
-      <p>Realizacja 3 wystaw w międzynarodowych Galeriach Sztuki, obejmująca instalację, inaugurację i katalog.
-      </p>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/galerie_isabel_lesmeister1.jpg' %}" alt="Galerie Isabelle Lesmeister"
-              class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Galerie Isabelle Lesmeister</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Ratyzbona,
-              Niemcy</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/galeria_fernando_santos1.jpg' %}" alt="Galeria Fernando Santos"
-              class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Galeria Fernando Santos</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Porto,
-              Portugalia</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/chelouche_gallery1.jpg' %}" alt="Galeria Sztuki Współczesnej Chelouche"
-              class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Galeria Sztuki Współczesnej
-              Chelouche</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Tel Aviv,
-              Izrael</strong>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid bg-3" style="background-color: #D3D3D3">
-        <h4 style="color:#cd0000">1 NAGRODA ZRÓWNOWAŻONY ROZWÓJ I SZTUKA</h4>
-        <p>Kreatywne projekty w trosce o zrównoważony rozwój.</p>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="col-sm-8">
-              <img src="{% static 'images/ars.jpg' %}" alt="Galeria Sztuki Współczesnej Chelouche" class="img-responsive"
-                width="100%">
-              <strong style="color: #3f81a1; text-transform:uppercase;">
-                ARS(Art Reuse Sustainability): zrównoważony rozwój i ponowne wykorzystanie szkła
-              </strong>
-              <br />
-              <strong>
-                3,000 Euro
-              </strong>
-              <br />
-              <p>Prezentacja prac, produktów i projektów artystycznych i designerskich, fotografii, sztuki
-                wideo, performance
-                itd. podkreślających walory szkła według strategii RRR (Reduce Reuse Recycle). </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h4 style="color:#cd0000">POBYTU W 11 REZYDENCJACH SZTUKI</h4>
-      <br />
-      <p>Program Rezydencji Sztuki we Włoszech oraz za granicą ma na celu zaoferowanie miejsca oraz czasu
-        umożliwiających
-        doświadczenie nowej kultury, stworzenia nowych dzieł oraz uczestniczenia w nowych aktywnościach w
-        międzynarodowym
-        środowisku.
-      </p>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/san-francisco-art-residency.jpg' %}" alt="San Francisco Art Residency"
-              class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">San Francisco Art Residency</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">San Francisco,
-              Stany Zjednoczone</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/the-art-department.jpg' %}" alt="The Art Department" class="img-responsive"
+        <div class="col-sm-6">
+          <div class="col-sm-8">
+            <img src="{% static 'images/ars.jpg' %}" alt="Galeria Sztuki Współczesnej Chelouche" class="img-responsive"
               width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">The Art Department</strong>
+            <strong style="color: #3f81a1; text-transform:uppercase;">
+              ARS(Art Reuse Sustainability): zrównoważony rozwój i ponowne wykorzystanie szkła
+            </strong>
             <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Bodrum,
-              Turcja</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/gloart1.jpg' %}" alt="GLO’ART" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">GLO’ART</strong>
+            <strong>
+              3,000 Euro
+            </strong>
             <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Lanaken,
-              Belgia</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/espronceda1.jpg' %}" alt="Espronceda" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Espronceda</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Barcelona,
-              Hiszpania</strong>
+            <p>Prezentacja prac, produktów i projektów artystycznych i designerskich, fotografii, sztuki
+              wideo, performance
+              itd. podkreślających walory szkła według strategii RRR (Reduce Reuse Recycle). </p>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/basu_foundation1.jpg' %}" alt="Basu Foundation for the Arts" class="img-responsive"
-              width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Basu Foundation for the Arts</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Kalkuta,
-              Indie</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/serigrafia_artistica_fallani1.jpg' %}" alt="Sitodruk artystyczny Fallani"
-              class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Sitodruk artystyczny Fallani</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Kalkuta,
-              Indie</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/farm-cultural-park.jpg' %}" alt="Farm Cultural Park" class="img-responsive"
-              width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Farm Cultural Park</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Favara
-              Włochy</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/arte-sella.jpg' %}" alt="Arte Sella" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Arte Sella</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Trento
-              Włochy</strong>
-          </div>
+    </div>
+    <h4 style="color:#cd0000">POBYTU W 11 REZYDENCJACH SZTUKI</h4>
+    <br />
+    <p>Program Rezydencji Sztuki we Włoszech oraz za granicą ma na celu zaoferowanie miejsca oraz czasu
+      umożliwiających
+      doświadczenie nowej kultury, stworzenia nowych dzieł oraz uczestniczenia w nowych aktywnościach w
+      międzynarodowym
+      środowisku.
+    </p>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/san-francisco-art-residency.jpg' %}" alt="San Francisco Art Residency"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">San Francisco Art Residency</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">San Francisco,
+            Stany Zjednoczone</strong>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/swatchartpeacehotel1.jpg' %}" alt="The Swatch Art Peace Hotel"
-              class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">The Swatch Art Peace Hotel</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Szanghaj
-              Chiny</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/maradiva.jpg' %}" alt="Maradiva Cultural Residency" class="img-responsive"
-              width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Maradiva Cultural Residency</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Flic-en-Flac
-              Mauritius</strong>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/muranoglass.jpg' %}" alt="Murano Glass ArtResidency" class="img-responsive"
-              width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Murano Glass ArtResidency</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Wenecja
-              Włochy</strong>
-          </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/the-art-department.jpg' %}" alt="The Art Department" class="img-responsive"
+            width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">The Art Department</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Bodrum,
+            Turcja</strong>
         </div>
       </div>
-      <h4 style="color:#cd0000">3 WSPÓŁPRAC Z FIRMAMI</h4>
-      <br />
-      <p>Selection of Wybór 3 kreatywnych projektów do współpracy z pięcioma firmami.</p>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/zanetto.jpg' %}" alt="Manifattura Zanetto" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Manifattura Zanetto</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">€
-              2.000</strong>
-            <br />
-            <p>Prezentacja nowego projektu naczynia, które przynajmniej w jednej części zostanie wykonane z
-              metalu szlachetnego</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/biafarin.jpg' %}" alt="Biafarin" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Biafarin</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">€
-              2.000</strong>
-            <br />
-            <p>Membership Packages dla 24 artystów + nagroda w wysokości US $ 4000 dla 4 wybranych artystów
-              (po US$ 1000 dla
-              każdego)
-            </p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/artmajeur.jpg' %}" alt="Artmajeur" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Artmajeur</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Visibility</strong>
-            <br />
-            <p>Promocja: dla 1 artysty promocja na portalu i 1 artykuł w Artmajeur Magazine. Dla finalistów
-              konto użytkownika
-              Platinum przez rok.</p>
-          </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/gloart1.jpg' %}" alt="GLO’ART" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">GLO’ART</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Lanaken,
+            Belgia</strong>
         </div>
       </div>
-      <h4 style="color:#cd0000">3 MIĘDZYNARODOWYCH FESTIWALACH</h4>
-      <br />
-      <p>Wybór 12 artystów do udziału w zbiorowych wydarzeniach. </p>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/artnova100_1.jpg' %}" alt="Art Nova 100" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Art Nova 100</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Pekin,
-              Chiny</strong>
-          </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/espronceda1.jpg' %}" alt="Espronceda" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Espronceda</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Barcelona,
+            Hiszpania</strong>
         </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/artstays_1.jpg' %}" alt="Art Stays Festival" class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Art Stays Festival</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Ptuj,
-              Słowenia</strong>
-          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/basu_foundation1.jpg' %}" alt="Basu Foundation for the Arts"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Basu Foundation for the Arts</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Kalkuta,
+            Indie</strong>
         </div>
-        <div class="col-sm-3">
-          <div class="col-sm-12">
-            <img src="{% static 'images/open_1.jpg' %}" alt="Open, Międzynarodowa Wystawa Rzeźb i Instalacji"
-              class="img-responsive" width="100%">
-            <strong style="color: #3f81a1; text-transform:uppercase;">Open, Międzynarodowa Wystawa Rzeźb i
-              Instalacji</strong>
-            <br />
-            <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Wenecja,
-              Włochy</strong>
-          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/serigrafia_artistica_fallani1.jpg' %}" alt="Sitodruk artystyczny Fallani"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Sitodruk artystyczny Fallani</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Kalkuta,
+            Indie</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/farm-cultural-park.jpg' %}" alt="Farm Cultural Park" class="img-responsive"
+            width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Farm Cultural Park</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Favara
+            Włochy</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/arte-sella.jpg' %}" alt="Arte Sella" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Arte Sella</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Trento
+            Włochy</strong>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/swatchartpeacehotel1.jpg' %}" alt="The Swatch Art Peace Hotel"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">The Swatch Art Peace Hotel</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Szanghaj
+            Chiny</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/maradiva.jpg' %}" alt="Maradiva Cultural Residency" class="img-responsive"
+            width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Maradiva Cultural Residency</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Flic-en-Flac
+            Mauritius</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/muranoglass.jpg' %}" alt="Murano Glass ArtResidency" class="img-responsive"
+            width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Murano Glass ArtResidency</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Wenecja
+            Włochy</strong>
+        </div>
+      </div>
+    </div>
+    <h4 style="color:#cd0000">3 WSPÓŁPRAC Z FIRMAMI</h4>
+    <br />
+    <p>Selection of Wybór 3 kreatywnych projektów do współpracy z pięcioma firmami.</p>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/zanetto.jpg' %}" alt="Manifattura Zanetto" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Manifattura Zanetto</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">€
+            2.000</strong>
+          <br />
+          <p>Prezentacja nowego projektu naczynia, które przynajmniej w jednej części zostanie wykonane z
+            metalu szlachetnego</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/biafarin.jpg' %}" alt="Biafarin" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Biafarin</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">€
+            2.000</strong>
+          <br />
+          <p>Membership Packages dla 24 artystów + nagroda w wysokości US $ 4000 dla 4 wybranych artystów
+            (po US$ 1000 dla
+            każdego)
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/artmajeur.jpg' %}" alt="Artmajeur" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Artmajeur</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Visibility</strong>
+          <br />
+          <p>Promocja: dla 1 artysty promocja na portalu i 1 artykuł w Artmajeur Magazine. Dla finalistów
+            konto użytkownika
+            Platinum przez rok.</p>
+        </div>
+      </div>
+    </div>
+    <h4 style="color:#cd0000">3 MIĘDZYNARODOWYCH FESTIWALACH</h4>
+    <br />
+    <p>Wybór 12 artystów do udziału w zbiorowych wydarzeniach. </p>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/artnova100_1.jpg' %}" alt="Art Nova 100" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Art Nova 100</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Pekin,
+            Chiny</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/artstays_1.jpg' %}" alt="Art Stays Festival" class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Art Stays Festival</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Ptuj,
+            Słowenia</strong>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="col-sm-12">
+          <img src="{% static 'images/open_1.jpg' %}" alt="Open, Międzynarodowa Wystawa Rzeźb i Instalacji"
+            class="img-responsive" width="100%">
+          <strong style="color: #3f81a1; text-transform:uppercase;">Open, Międzynarodowa Wystawa Rzeźb i
+            Instalacji</strong>
+          <br />
+          <strong style="color: #666666; text-decoration: none; text-transform:uppercase;">Wenecja,
+            Włochy</strong>
         </div>
       </div>
     </div>
   </div>
 </section>
 <section id="important">
-  <div class="container-fluid">
-    <h3 style="color:#cd0000">NAJWAŻNIEJSZE DANE</h3>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="col-sm-12">
-          <div style="color:#3f81a1; font-size:20px">01 Września 2017
-            <div>
-              <h3>
-                <a href="#">ZAPISY OTWARTE</a>
-              </h3>
-              <span class="gkEventsListProgress">
-                <div style="width: 0%;"></div>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="col-sm-12">
-          <div style="color:#cd0000; font-size:20px; border:2px solid #3f81a1;">18 Grudnia 2017
-            <div>
-              <h3>
-                <a href="#" title="Deadline applications">DEADLINE </a>
-              </h3>
-              <span class="gkEventsListProgress">
-                <div style="width: 100%;"></div>
-              </span>
-            </div>
+  <h3 style="color:#cd0000">NAJWAŻNIEJSZE DANE</h3>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="col-sm-12">
+        <div style="color:#3f81a1; font-size:20px">01 Września 2017
+          <div>
+            <h3>
+              <a href="#">ZAPISY OTWARTE</a>
+            </h3>
+            <span class="gkEventsListProgress">
+              <div style="width: 0%;"></div>
+            </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="col-sm-12">
-          <div style="color:#3f81a1; font-size:20px">Luty 2018
-            <div>
-              <h3>
-                <a href="#" title="Ogłoszenie finalistów">OGŁOSZENIE FINALISTÓW</a>
-              </h3>
-              <span class="gkEventsListProgress">
-                <div style="width: 0%;"></div>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-6">
-        <div class="col-sm-12">
-          <div style="color:#3f81a1; font-size:20px">17 Marca 2018
-            <div>
-              <h3 style="color:3f81a1;">
-                <a href="#" title="Wystawy Finalistów">WYSTAWY FINALISTÓW</a>
-              </h3>
-              <span class="gkEventsListProgress">
-                <div style="width: 0%;"></div>
-              </span>
-            </div>
+    <div class="col-sm-6">
+      <div class="col-sm-12">
+        <div style="color:#cd0000; font-size:20px; border:2px solid #3f81a1;">18 Grudnia 2017
+          <div>
+            <h3>
+              <a href="#" title="Deadline applications">DEADLINE </a>
+            </h3>
+            <span class="gkEventsListProgress">
+              <div style="width: 100%;"></div>
+            </span>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="col-sm-12">
+        <div style="color:#3f81a1; font-size:20px">Luty 2018
+          <div>
+            <h3>
+              <a href="#" title="Ogłoszenie finalistów">OGŁOSZENIE FINALISTÓW</a>
+            </h3>
+            <span class="gkEventsListProgress">
+              <div style="width: 0%;"></div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="col-sm-12">
+        <div style="color:#3f81a1; font-size:20px">17 Marca 2018
+          <div>
+            <h3 style="color:3f81a1;">
+              <a href="#" title="Wystawy Finalistów">WYSTAWY FINALISTÓW</a>
+            </h3>
+            <span class="gkEventsListProgress">
+              <div style="width: 0%;"></div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <section id="regulamin">
   <div class="container-fluid">
@@ -846,7 +840,7 @@
 </section>
 <br>
 <br>
-<div class="container-fluid">
+<section id="sitemap">
   <div class="row">
     <div class="col-sm-3">
       <div class="col-sm-12">
@@ -973,5 +967,5 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 {% endblock content %}

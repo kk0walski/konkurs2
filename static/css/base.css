@@ -12,7 +12,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -24,10 +25,10 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   background-color: #de1a22;
+  margin-top: 20px;
+  padding-bottom: 10px;
 }
 
 
