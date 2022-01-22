@@ -279,7 +279,10 @@ class CountryField(models.CharField):
 
 
 class CustomUser(AbstractUser):
-    pass
+    email = models.EmailField(_('email address'), unique=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
 
     def __str__(self):
         return self.email
