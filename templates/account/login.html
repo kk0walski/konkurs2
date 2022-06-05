@@ -3,19 +3,17 @@
 
 {% block title %}Log in{% endblock %}
 
-{% block form %}
+{% block content %}
 <h4>Log in</h4>
 <form method="post">
   {% csrf_token %}
   {{ form|crispy }}
-  <label class="pull-right">
-    <a href="{% url 'account_reset_password' %}">Forgot Password?</a>
-  </label>
-  <button class="btn btn-primary btn-flat mb-4 mt-4" type="submit">Log in</button>
-  <div class="register-link text-center">
-    <p>
-      Don't have account? <a href="{% url 'account_signup' %}">Sing Up Here</a>
-    </p>
+  <div class="checkbox">
+    <label class="pull-right">
+      <a href="{% url 'account_reset_password' %}">Forgot Password?</a>
+    </label>
   </div>
+  <button class="btn btn-success" type="submit">Log in</button>
 </form>
-{% endblock form %}
+</div>
+{% endblock content %}

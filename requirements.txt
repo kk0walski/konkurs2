@@ -1,8 +1,10 @@
-Django==3.2.11
-django-allauth==0.47.0
-django-crispy-forms==1.13.0
+Django==4.0.4
+django-allauth==0.50.0
+django-crispy-forms==1.14.0
 django-debug-toolbar==3.2.4
-whitenoise==5.3.0
-phonenumbers>=7.0.2
-django-phonenumber-field==6.0.0
-Babel==2.9.1
+whitenoise==6.0.0
+psycopg2-binary==2.9.3
+django-tables2==2.4.1
+django-filter==21.1
+django-phonenumbers==1.0.1
+django-phonenumber-field==6.1.0

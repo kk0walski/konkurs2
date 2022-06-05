@@ -1,0 +1,100 @@
+label {
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .login-logo {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .login-logo span {
+    color: #ffffff;
+    font-size: 24px;
+  }
+  .login-logo img {
+    height: 75px;
+  }
+  .login-content {
+    margin: 100px 0;
+  }
+  .login-form {
+    background: #ffffff;
+    padding: 30px 30px 20px;
+    border-radius: 2px;
+  }
+  .login-form h4 {
+    color: #373757;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .login-form .checkbox {
+    color: #373757;
+  }
+  .login-form .checkbox label {
+    text-transform: none;
+  }
+  .login-form .btn {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px;
+    border: 0px;
+  }
+  .login-form label {
+    color: #373757;
+    text-transform: uppercase;
+  }
+  .login-form label a {
+    color: #5873fe;
+  }
+  
+  .login-form h4 {
+    color: #373757;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .login-form .checkbox {
+    color: #373757;
+  }
+  .login-form .checkbox label {
+    text-transform: none;
+  }
+  .login-form .btn {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px;
+    border: 0px;
+  }
+  .login-form label {
+    color: #373757;
+    text-transform: uppercase;
+  }
+  .login-form label a {
+    color: #5873fe;
+  }
+  
+  .pull-right {
+    float: right;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-control {
+    height: 42px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-color: #e7e7e7;
+    font-family: 'Roboto', sans-serif;
+  }
+  .form-control:hover {
+    box-shadow: none;
+    border-color: #e7e7e7;
+  }
+  .form-control:focus,
+  .form-control.active {
+    box-shadow: none;
+    border-color: #878787;
+  }
