@@ -8,3 +8,5 @@ django-tables2==2.4.1
 django-filter==21.1
 django-phonenumbers==1.0.1
 django-phonenumber-field==6.1.0
+django_active_link==0.1.8
+Pillow==9.1.1
